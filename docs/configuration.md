@@ -60,6 +60,7 @@ In most cases, edit `.env` and then rebuild or restart the stack.
 |---|---|---|
 | `LLM` | Yes | Selects the provider and model, for example `google-gla:gemini-3-flash-preview` |
 | `OPENAI_API_KEY` | If using OpenAI | Required for `openai:*` models |
+| `OPENAI_BASE_URL` | No | OpenAI-compatible endpoint including `/v1`; defaults to `https://api.openai.com/v1`. Use `LLM=openai:<model-id>` with a model offered by that endpoint. Recreate backend and worker containers after changing environment settings. |
 | `GOOGLE_API_KEY` | If using Google | Required for `google-gla:*` models |
 | `ANTHROPIC_API_KEY` | If using Anthropic | Required for `anthropic:*` models |
 | `OLLAMA_BASE_URL` | If using Ollama remotely | Base URL for Ollama-compatible endpoints |
